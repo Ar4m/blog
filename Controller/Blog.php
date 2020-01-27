@@ -29,7 +29,6 @@ class Blog
     $this->_iId = (int) (!empty($_GET['id']) ? $_GET['id'] : 0);
   }
 
-	/* ================ ACTIONS AVEC VUS ================ */
 
   // On obtient seulement les X derniers posts puis on affiche index.php
   public function index()

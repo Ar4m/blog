@@ -10,7 +10,7 @@
   				<h4><?= $oPost->title ?></h4>
   				<div class="row">
   					<div class="col s12 m6 l8">
-              <!-- On affiche les 1200 premiers caractères et on affiche pas les images -->
+              <!-- On affiche les premiers caractères et on affiche pas les images -->
   						<?= preg_replace("/<img[^>]+\>/i", "", nl2br(mb_strimwidth($oPost->body, 0, 400, '...'))); ?>
               <br><br>
               <?php require 'inc/control_buttons.php' ?>

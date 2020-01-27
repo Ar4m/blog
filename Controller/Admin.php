@@ -5,8 +5,6 @@ namespace BlogPhp\Controller;
 class Admin extends Blog
 {
 
-    /* ================ ACTIONS AVEC VUS ================ */
-
     // Récupère les données de tous les posts puis affiche la page edit.php
     public function edit()
     {
@@ -104,7 +102,6 @@ class Admin extends Blog
 
     // On affiche la page dashboard.php
     // On définit les tables qui seront affichées sur la page ainsi que leur couleur
-    // On obtient les commentaires non-signalés, les commentaires signalés et le nombre de signalements
     public function dashboard()
     {
       if (!$this->isLogged())
@@ -141,10 +138,7 @@ class Admin extends Blog
     }
 
 
-    /* ================ ACTIONS SANS VUS ================ */
 
-
-    // On supprime le post ainsi que les commentaires associés à ce post et les signalements de ces commentaires
     public function delete()
     {
       if (!$this->isLogged())
@@ -158,7 +152,6 @@ class Admin extends Blog
       header('Location: admin_edit.html');
     }
 
-    // On obtient la couleur associé à chaque table
     private function getColor($aTable,$sColors)
     {
       if(isset($sColors[$aTable])){
